@@ -45,7 +45,7 @@ $(document).read(function(e))
     <form id ="myChatForm">
       <input type="text" id = "user_name" placeholder="enter your name"><br>
       <textarea name="message" id = "message" cols="30" rows="2" placeholder="enter your massage here ...."></textarea><br>
-      <button class="btn btn-success btn-ls" id="sendMessageBtn">Send message</button>
+      <button type="button" class="btn btn-success btn-ls" id="sendMessageBtn">Send message</button>
     </form>
   </div>
 
