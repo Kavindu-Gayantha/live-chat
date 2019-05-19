@@ -29,7 +29,6 @@ $(document).ready(function(e)
 });
 </script>
 
-}
 </head>
 <body>
   <div class = "container-fluid">
