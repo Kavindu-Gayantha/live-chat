@@ -14,6 +14,7 @@ $(document).ready(function(e)
    {
      var  name = $("#user_name").val();
      var message = $("#message").val();
+     $('#myChatForm')[0].reset();
 
      $.ajax({
 
@@ -23,10 +24,14 @@ $(document).ready(function(e)
            uname:name,
            umessage:message
          }
-       }
-     );
+       });
    });
 });
+// fuction click_send_sendButton()
+// {
+//   document.getElementById('user_name').innerHTML = " ";
+//   document.getElementById('message').innerHTML =" ";
+// }
 </script>
 
 </head>
@@ -44,7 +49,7 @@ $(document).ready(function(e)
     <form id ="myChatForm">
       <input type="text" id = "user_name" placeholder="enter your name"><br>
       <textarea name="message" id = "message" cols="30" rows="2" placeholder="enter your massage here ...."></textarea><br>
-      <button type="button" class="btn btn-success btn-lg" id="sendMessageBtn">Send message</button>
+      <button type="button"  class="btn btn-success btn-lg" id="sendMessageBtn">Send message</button>
     </form
   </div>
 
