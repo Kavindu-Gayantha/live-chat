@@ -14,6 +14,21 @@
 <script>
 $(document).ready(function(e)
 {
+  function displayChat()
+  {
+      $.ajax({
+        url: 'displayChat.php',
+        type: 'POST',
+        success: function(data)
+        {
+          $("#chatDisplay").html(data);
+        }
+      });
+  }
+    // displayChat();
+    setInterval() {function(displayChat();},1000);
+
+
    $('#sendMessageBtn').click(function(e)
    {
      var  name = $("#user_name").val();
@@ -46,20 +61,7 @@ $(document).ready(function(e)
 
     <div class ="well" id ="chatBox">
        <!-- <h3> Live Chat Room </h3> -->
-       <?php
-          $query = " SELECT * FROM chatroom ";
-          $run = mysqli_query($con,$query);
-          while($row = mysqli_fetch_array($run))
-          {
-
-
-        ?>
-      <p>
-        <span style="color:red; font-weight:bold;"><?php echo $row ['name'] ." : ";?> </span>
-        <span style="color:blue"><?php echo $row ['message'];?></span>
-        <span style="float:right;">10.43 PM</span>
-      </p>
-      <?php } ?>
+       <div id="chatDisplay"></div>
     </div>
     <form id ="myChatForm">
       <input type="text" id = "user_name" placeholder="enter your name"><br>
