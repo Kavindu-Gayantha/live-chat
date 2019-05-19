@@ -1,3 +1,7 @@
+<?php
+  include("./config.php");
+ ?>
+
  <!doctype html>
 <html>
 <head><title>lets chat</title>
@@ -38,13 +42,24 @@ $(document).ready(function(e)
 <body>
   <div class = "container-fluid">
     <h3 class="text-center">Live chat Room</h3>
+
+
     <div class ="well" id ="chatBox">
        <!-- <h3> Live Chat Room </h3> -->
+       <?php
+          $query = " SELECT * FROM chatroom ";
+          $run = mysqli_query($con,$query);
+          while($row = mysqli_fetch_array($run))
+          {
+
+
+        ?>
       <p>
-        <span style="color:red;">john : </span>
-        <span style="color:blue">hello world ! </span>
+        <span style="color:red; font-weight:bold;"><?php echo $row ['name'] ." : ";?> </span>
+        <span style="color:blue"><?php echo $row ['message'];?></span>
         <span style="float:right;">10.43 PM</span>
       </p>
+      <?php } ?>
     </div>
     <form id ="myChatForm">
       <input type="text" id = "user_name" placeholder="enter your name"><br>
