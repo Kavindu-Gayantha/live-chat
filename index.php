@@ -24,10 +24,13 @@ $(document).ready(function(e)
           $("#chatDisplay").html(data);
         }
       });
-  }
-    // displayChat();
-    setInterval() {function(displayChat();},1000);
 
+
+    // setInterval() {function(displayChat();},1000);
+
+}
+displayChat();
+setInterval(function(){displayChat();},1000);
 
    $('#sendMessageBtn').click(function(e)
    {
@@ -60,7 +63,7 @@ $(document).ready(function(e)
 
 
     <div class ="well" id ="chatBox">
-       <!-- <h3> Live Chat Room </h3> -->
+        <!-- <h3> Live Chat Room </h3> -->
        <div id="chatDisplay"></div>
     </div>
     <form id ="myChatForm">
