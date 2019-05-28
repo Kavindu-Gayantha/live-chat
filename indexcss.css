@@ -1,12 +1,18 @@
 #chatBox
 {
   width:40%;
-  height: 400px;
+  height: 400vh;
   margin:0 auto;
+
 }
 #myChatForm
 {
   text-align: center;
+  position: fixed;
+  bottom:0;
+  width:100%;
+  float:center;
+  margin-left: -14px;
 
 }
 input[type="text"]
